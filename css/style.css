@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans");
 
 /* Color Variables */
-:root {
+/* :root {
   --primary-color: rgb(156, 209, 173);
   --primary-color-hover: rgb(207, 232, 215);
   --secondary-color: rgb(0, 0, 0);
@@ -13,9 +13,9 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--primary-color);
   height: 100vh;
-  /* margin: 0; */
-}
-
+  
+} */
+/* 
 #welcome {
   padding: 0;
   background: url(../img/yang-dixon.jpg) no-repeat center/cover;
@@ -40,11 +40,11 @@ body {
   font-size: 2rem;
   padding: 3px;
   text-decoration: none;
-}
+} */
 
 /* ========= Utility Classes ========= */
 
-i {
+/* i {
   color: black;
 }
 
@@ -56,11 +56,11 @@ i {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 3rem;
-}
+} */
 
 /* ========= Icons ========= */
 
-#icons i {
+/* #icons i {
   font-size: 2.5rem;
 }
 
@@ -70,28 +70,28 @@ i {
 
 #icons i:hover {
   color: var(--secondary-color-hover);
-}
+} */
 
 /* ========= About ========= */
 
-main {
+/* main {
   padding: 3rem;
 }
 
 #about-me {
   background-color: var(--primary-color);
-}
+} */
 
 /* ========= Previous Work ========= */
 
-#previous-work {
+/* #previous-work {
   background-color: var(--secondary-color-hover);
 }
 
 nav a:hover {
   text-decoration: none;
   color: var(--secondary-color);
-}
+} */
 
 /* ========= Footer ========= */
 
@@ -102,7 +102,7 @@ nav a:hover {
 
 /* ========= Navigation ========= */
 
-nav {
+/* nav {
   height: 45px;
   width: 100%;
   background-color: var(--primary-color);
@@ -127,37 +127,37 @@ nav a {
   padding: 10px 0;
   color: #eee;
   text-decoration: none;
-}
+} */
 /* nav li:hover {
   /* background-color: var(--secondary-color); */
 /* text-decoration: none; */
 /* }  */
-nav a#openup {
+/* nav a#openup {
   display: none;
-}
+} */
 
 /* square logo image fixed to nav */
-nav img {
+/* nav img {
   height: 40px;
   width: 40px;
   background-size: cover;
-}
+} */
 
 /* styles only applied to 580px or LESS */
-@media screen and (max-width: 580px) {
-  /* original styling from old portfolio page brought in to make about me section 
+/* @media screen and (max-width: 580px) { */
+/* original styling from old portfolio page brought in to make about me section 
 work correclty on mobile */
 
-  main {
+/* main {
     align-items: center;
     text-align: center;
   }
   .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
-  }
+  } */
 
-  .about-info {
+/* .about-info {
     grid-template-areas:
       "bioimage"
       "bio"
@@ -166,11 +166,11 @@ work correclty on mobile */
       "job3";
 
     grid-template-columns: 1fr;
-  }
+  } */
 
-  /* resume stacked  */
+/* resume stacked  */
 
-  .grid-resume {
+/* .grid-resume {
     grid-template-areas:
       "job-1"
       "job-2"
@@ -178,24 +178,24 @@ work correclty on mobile */
       "job-4"
       "job-5";
     grid-template-columns: 1fr;
-  }
+  } */
 
-  /* stacks portfolio work imgs */
-  .projects {
+/* stacks portfolio work imgs */
+/* .projects {
     grid-template-areas:
       "img"
       "img"
       "img";
     grid-template-columns: 1fr;
-  }
+  } */
 
-  /* original style end======================= */
-  /* class to add/remove once I figure out best event handler for sticky header */
-  .hide-on-small {
+/* original style end======================= */
+/* class to add/remove once I figure out best event handler for sticky header */
+/* .hide-on-small {
     display: none;
-  }
+  } */
 
-  #welcome {
+/* #welcome {
     height: 80vh;
   }
 
@@ -209,17 +209,16 @@ work correclty on mobile */
 
   #welcome h2 {
     font-size: 1.5rem;
-  }
-
+  } */
+/* 
   a {
     text-decoration: none;
-    /* color */
-  }
+  } */
 
-  h1 {
+/* h1 {
     font-size: 2.8em;
-  }
-
+  } */
+/* 
   nav {
     height: auto;
     border-bottom: 0;
@@ -236,10 +235,10 @@ work correclty on mobile */
   nav a {
     text-align: left;
     width: 100%;
-    text-indent: 25px;
-    /* background: #333; */
-    border-bottom: 1px solid #555;
-  }
+    text-indent: 25px; */
+/* background: #333; */
+/* border-bottom: 1px solid #555; */
+/* }
   nav a:hover {
     color: var(--secondary-color);
     text-decoration: none;
@@ -248,11 +247,11 @@ work correclty on mobile */
   nav a#openup:after {
     content: "|||";
     transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-90deg);
-    /* Safari and Chrome */
-    width: 30px;
+    -ms-transform: rotate(-90deg); */
+/* IE 9 */
+/* -webkit-transform: rotate(-90deg); */
+/* Safari and Chrome */
+/* width: 30px;
     height: 30px;
     display: inline-block;
     position: absolute;
@@ -278,4 +277,109 @@ work correclty on mobile */
 
 .cf {
   zoom: 1;
+} */
+
+/* ======================== PARALLAX VERSION ======================== */
+
+body {
+  height: 2000px;
+}
+
+#scroll-animate {
+  overflow: hidden;
+}
+
+#scroll-animate-main {
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll {
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage {
+  left: 0;
+}
+
+#heightScroll {
+  right: 0;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg)
+    no-repeat 50% 50%;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background: gray;
+  bottom: -300px;
+  position: fixed;
+  z-index: -1;
+}
+
+.content {
+  height: 1000px;
+  min-height: 1000px;
+  background: #ededed;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+/* header h1 {
+} */
+
+.content h1 {
+  line-height: 1000px;
+  color: #999;
+}
+
+footer h1 {
+  line-height: 300px;
+}
+
+header,
+footer,
+#scroll-animate-main {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
 }
