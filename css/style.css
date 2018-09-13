@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans");
+
+/* Color Variables */
+:root {
+  --primary-color: rgb(156, 209, 173);
+  --primary-color-hover: rgb(207, 232, 215);
+  --secondary-color: rgb(0, 0, 0);
+  --secondary-color-hover: rgb(244, 244, 244);
+  --easeOut: all 0.25s ease-out;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-color);
+  /* margin: 0; */
+}
+
+#welcome {
+  /* margin: 0; */
+  padding: 0;
+  background: url(../img/yang-dixon.jpg) no-repeat center/cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#welcome .container {
+  margin-top: 25vh;
+  color: var(--secondary-color-hover);
+}
+
+#welcome h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: white;
+  /* float: left; */
+}
+
+#welcome h2 {
+  font-size: 2rem;
+  padding: 3px;
+  text-decoration: none;
+}
+
+/* ========= Utility Classes ========= */
+
+i {
+  color: black;
+}
+
+.lead {
+  font-size: 0.8rem;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* ========= Icons ========= */
+
+#icons i {
+  font-size: 2.5rem;
+}
+
+#icons a {
+  text-decoration: none;
+}
+
+#icons i:hover {
+  color: var(--secondary-color-hover);
+}
+
+/* ========= About ========= */
+
+main {
+  padding: 3rem;
+}
+
+#about-me {
+  background-color: var(--primary-color);
+}
+
+/* ========= Previous Work ========= */
+
+#previous-work {
+  background-color: var(--secondary-color-hover);
+}
+
+/* ========= Navigation ========= */
+
+nav {
+  height: 40px;
+  width: 100%;
+  /* background-color: var(--secondary-color); */
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  color: #eee;
+  position: fixed;
+  /* opacity: 0.5%; */
+  /* ensure navbar overlaps everything else */
+  /* z-index: 999; */
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+nav li:hover {
+  background-color: #444;
+}
+nav a#openup {
+  display: none;
+}
+
+nav img {
+  height: 40px;
+  width: 40px;
+
+  /* border-radius: 50%; */
+}
+/* styles only applied to 580px or LESS */
+@media screen and (max-width: 580px) {
+  /* original styling from old portfolio page brought in to make about me section 
+work correclty on mobile */
+
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
+
+  /* resume stacked  */
+
+  .grid-resume {
+    grid-template-areas:
+      "job-1"
+      "job-2"
+      "job-3"
+      "job-4"
+      "job-5";
+    grid-template-columns: 1fr;
+  }
+
+  /* stacks portfolio work imgs */
+  .projects {
+    grid-template-areas:
+      "img"
+      "img"
+      "img";
+    grid-template-columns: 1fr;
+  }
+
+  /* original style end======================= */
+  /* class to add/remove once I figure out best event handler for sticky header */
+  .hide-on-small {
+    display: none;
+  }
+
+  #welcome {
+    height: 50vh;
+  }
+
+  #welcome .container {
+    margin-top: 15vh;
+  }
+
+  #welcome h1 {
+    font-size: 3rem;
+  }
+
+  #welcome h2 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8em;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #444;
+    text-decoration: none;
+  }
+  nav a#openup:after {
+    content: "|||";
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+  }
+  nav a#openup {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
