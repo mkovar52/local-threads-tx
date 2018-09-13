@@ -12,11 +12,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--primary-color);
+  height: 100vh;
   /* margin: 0; */
 }
 
 #welcome {
-  /* margin: 0; */
   padding: 0;
   background: url(../img/yang-dixon.jpg) no-repeat center/cover;
   height: 100vh;
@@ -34,7 +34,6 @@ body {
   font-size: 4rem;
   margin-bottom: 0;
   color: white;
-  /* float: left; */
 }
 
 #welcome h2 {
@@ -89,19 +88,28 @@ main {
   background-color: var(--secondary-color-hover);
 }
 
+nav a:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+/* ========= Footer ========= */
+
+/* .logo-footer {
+  height: 100px;
+  width: 200px;
+} */
+
 /* ========= Navigation ========= */
 
 nav {
-  height: 40px;
+  height: 45px;
   width: 100%;
-  /* background-color: var(--secondary-color); */
   background-color: var(--primary-color);
   opacity: 0.9;
-  color: #eee;
   position: fixed;
-  /* opacity: 0.5%; */
-  /* ensure navbar overlaps everything else */
-  /* z-index: 999; */
+  z-index: 999;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 nav ul {
   padding: 0;
@@ -120,19 +128,21 @@ nav a {
   color: #eee;
   text-decoration: none;
 }
-nav li:hover {
-  background-color: #444;
-}
+/* nav li:hover {
+  /* background-color: var(--secondary-color); */
+/* text-decoration: none; */
+/* }  */
 nav a#openup {
   display: none;
 }
 
+/* square logo image fixed to nav */
 nav img {
   height: 40px;
   width: 40px;
-
-  /* border-radius: 50%; */
+  background-size: cover;
 }
+
 /* styles only applied to 580px or LESS */
 @media screen and (max-width: 580px) {
   /* original styling from old portfolio page brought in to make about me section 
@@ -186,7 +196,7 @@ work correclty on mobile */
   }
 
   #welcome {
-    height: 50vh;
+    height: 80vh;
   }
 
   #welcome .container {
@@ -199,6 +209,11 @@ work correclty on mobile */
 
   #welcome h2 {
     font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    /* color */
   }
 
   h1 {
@@ -222,12 +237,13 @@ work correclty on mobile */
     text-align: left;
     width: 100%;
     text-indent: 25px;
-    background: #333;
+    /* background: #333; */
     border-bottom: 1px solid #555;
   }
   nav a:hover {
-    background: #444;
+    color: var(--secondary-color);
     text-decoration: none;
+    transition: var(--easeOut);
   }
   nav a#openup:after {
     content: "|||";

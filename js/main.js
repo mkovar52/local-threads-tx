@@ -22,3 +22,7 @@ $(function() {
   });
   $(".open-menu").height($(window).height());
 });
+
+// jarallax(document.querySelectorAll(".jarallax"), {
+//   speed: 0.2
+// });
